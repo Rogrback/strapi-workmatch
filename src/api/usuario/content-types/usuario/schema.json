@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "singularName": "usuario",
+    "pluralName": "usuarios",
+    "displayName": "Usuario",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "apellido_paterno": {
+      "type": "string",
+      "required": true
+    },
+    "apellido_materno": {
+      "type": "string",
+      "required": true
+    },
+    "correo": {
+      "type": "email",
+      "required": true
+    },
+    "password": {
+      "type": "password",
+      "required": true
+    },
+    "dia_nacimiento": {
+      "type": "integer",
+      "default": 0,
+      "required": false,
+      "max": 31
+    },
+    "mes_nacimiento": {
+      "type": "integer",
+      "required": false,
+      "default": 0,
+      "max": 12
+    },
+    "year_nacimiento": {
+      "type": "integer",
+      "required": false,
+      "default": 2000
+    },
+    "sexo": {
+      "type": "enumeration",
+      "enum": [
+        "Masculino",
+        "Femenino"
+      ],
+      "default": "Masculino"
+    },
+    "carrera": {
+      "type": "string"
+    },
+    "year_graduacion": {
+      "type": "integer"
+    },
+    "favoritos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::empresa.empresa"
+    }
+  }
+}

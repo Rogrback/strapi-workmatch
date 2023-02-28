@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_hola_publicfaqs",
+  "info": {
+    "displayName": "publicfaq",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "carousel": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "text": {
+      "type": "string"
+    },
+    "vision": {
+      "type": "integer"
+    }
+  }
+}

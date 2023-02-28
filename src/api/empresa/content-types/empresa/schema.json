@@ -1,0 +1,161 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empresas",
+  "info": {
+    "singularName": "empresa",
+    "pluralName": "empresas",
+    "displayName": "Empresa",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ruc": {
+      "type": "string",
+      "maxLength": 11,
+      "required": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "trabajadores": {
+      "type": "integer",
+      "required": true
+    },
+    "sector_economico": {
+      "type": "enumeration",
+      "enum": [
+        "Aerotransporte",
+        "Agroindustria",
+        "Alimentos",
+        "Automotriz/Autopartes",
+        "Bebidas/Licores",
+        "Bienes de Consumo",
+        "Celulosa/Papel",
+        "Cemento",
+        "Construcción/Ingeniería",
+        "Educación",
+        "Electrónica",
+        "Energía eléctrica",
+        "Ind. manufacturera",
+        "Máquinas/Equipos",
+        "Medios",
+        "Minería",
+        "Multisector",
+        "Pesca",
+        "Petróleo/Gas",
+        "Petroquímica",
+        "Química/Farmacéutica",
+        "Retail",
+        "Servicios de salud",
+        "Servicios financieros",
+        "Servicios generales",
+        "Siderurgía/Metalurgia",
+        "Telecomunicaciones",
+        "Textil/Calzado",
+        "Transporte/Logística"
+      ],
+      "required": true
+    },
+    "region": {
+      "type": "enumeration",
+      "enum": [
+        "Amazonas",
+        "Áncash",
+        "Apurímac",
+        "Arequipa",
+        "Ayacucho",
+        "Cajamarca",
+        "Callao",
+        "Cusco",
+        "Huancavelica",
+        "Huánuco",
+        "Ica",
+        "Junín",
+        "La Libertad",
+        "Lambayeque",
+        "Lima",
+        "Loreto",
+        "Madre de Dios",
+        "Moquegua",
+        "Pasco",
+        "Piura",
+        "Puno",
+        "San Martín",
+        "Tacna",
+        "Tumbes",
+        "Ucayali"
+      ],
+      "default": "Lima",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "premium": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "por_que_nosotros": {
+      "type": "text"
+    },
+    "mision": {
+      "type": "text"
+    },
+    "vision": {
+      "type": "text"
+    },
+    "valores": {
+      "type": "richtext",
+      "required": false
+    },
+    "puestos_publicados": {
+      "type": "string"
+    },
+    "banner_header": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "cards": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "PremiumComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hola.publicfaq"
+    },
+    "Hola": {
+      "type": "dynamiczone",
+      "components": [
+        "hola.publicfaq",
+        "creador.lastpick"
+      ]
+    }
+  }
+}
