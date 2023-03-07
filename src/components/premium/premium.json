@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_premium_premiums",
+  "info": {
+    "displayName": "premium"
+  },
+  "options": {},
+  "attributes": {
+    "banner_header": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "video": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cards": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "beneficios": {
+      "type": "component",
+      "repeatable": true,
+      "component": "beneficios.beneficios"
+    }
+  }
+}

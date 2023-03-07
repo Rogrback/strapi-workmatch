@@ -2,22 +2,13 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::empresa.empresa', ({ strapi }) => ({
+module.exports = createCoreController('plugin::users-permissions.user', ({ strapi }) => ({
     async findOne(ctx) {
         try {
             const { id } = ctx.params;
 
-            const entity = await strapi.db.query('api::empresa.empresa').findOne({
-                where: { ruc: id },
-                populate: {
-                    logo: true,
-                    valores: true,
-                    premios: true,
-                    certificaciones: true,
-                    premium: {
-                        populate: true,
-                    },
-                },
+            const entity = await strapi.db.query('plugin::users-permissions.user').findOne({
+                where: { correo: id }
             });
             if (!entity) {
                 return {
@@ -25,7 +16,7 @@ module.exports = createCoreController('api::empresa.empresa', ({ strapi }) => ({
                     error: {
                         status: 404,
                         name: 'NotFoundError',
-                        message: `El ruc ${id} no existe`,
+                        message: `El correo ${id} no existe`,
                         details: {}
                     }
                 };

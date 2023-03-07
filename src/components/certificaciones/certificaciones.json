@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_certificaciones_certificaciones",
+  "info": {
+    "displayName": "Certificaciones"
+  },
+  "options": {},
+  "attributes": {
+    "nombre_certificacion": {
+      "type": "string"
+    },
+    "tipo_certificacion": {
+      "type": "string"
+    },
+    "numero_certificado": {
+      "type": "integer"
+    },
+    "year": {
+      "type": "integer"
+    }
+  }
+}

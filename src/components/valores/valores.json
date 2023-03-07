@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_valores_valores",
+  "info": {
+    "displayName": "valores"
+  },
+  "options": {},
+  "attributes": {
+    "contenido": {
+      "type": "string"
+    }
+  }
+}

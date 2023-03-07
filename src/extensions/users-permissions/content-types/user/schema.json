@@ -73,7 +73,7 @@
     },
     "apellido_materno": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "dia_nacimiento": {
       "type": "integer",
@@ -91,8 +91,7 @@
       "enum": [
         "Masculino",
         "Femenino"
-      ],
-      "default": "Masculino"
+      ]
     },
     "carrera": {
       "type": "string"
@@ -100,10 +99,11 @@
     "year_graduacion": {
       "type": "integer"
     },
-    "favoritos": {
+    "empresasFavoritas": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::empresa.empresa"
+      "relation": "manyToMany",
+      "target": "api::empresa.empresa",
+      "inversedBy": "users"
     }
   }
 }

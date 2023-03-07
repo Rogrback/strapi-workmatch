@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_premios_premios",
+  "info": {
+    "displayName": "Premios",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "entidad": {
+      "type": "string"
+    },
+    "abreviatura_entidad": {
+      "type": "string"
+    },
+    "nombre_premio": {
+      "type": "string"
+    },
+    "puesto_premio": {
+      "type": "integer"
+    },
+    "year": {
+      "type": "integer"
+    }
+  }
+}

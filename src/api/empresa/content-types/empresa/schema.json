@@ -100,10 +100,10 @@
         "images"
       ]
     },
-    "premium": {
+    "premiumBoolean": {
       "type": "boolean",
       "default": false,
-      "required": true
+      "required": false
     },
     "por_que_nosotros": {
       "type": "text"
@@ -114,48 +114,44 @@
     "vision": {
       "type": "text"
     },
-    "valores": {
-      "type": "richtext",
-      "required": false
-    },
     "puestos_publicados": {
       "type": "string"
     },
-    "banner_header": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+    "empresa_favoritas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::empresa-favorita.empresa-favorita",
+      "mappedBy": "empresa_usuario"
     },
-    "video": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "videos"
-      ]
+    "premios": {
+      "displayName": "Premios",
+      "type": "component",
+      "repeatable": true,
+      "component": "premios.premios"
     },
-    "cards": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+    "certificaciones": {
+      "displayName": "Certificaciones",
+      "type": "component",
+      "repeatable": true,
+      "component": "certificaciones.certificaciones"
     },
-    "PremiumComponent": {
+    "premium": {
+      "displayName": "premium",
       "type": "component",
       "repeatable": false,
-      "component": "hola.publicfaq"
+      "component": "premium.premium"
     },
-    "Hola": {
-      "type": "dynamiczone",
-      "components": [
-        "hola.publicfaq",
-        "creador.lastpick"
-      ]
+    "valores": {
+      "displayName": "valores",
+      "type": "component",
+      "repeatable": true,
+      "component": "valores.valores"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "empresasFavoritas"
     }
   }
 }
