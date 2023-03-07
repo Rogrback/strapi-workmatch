@@ -9,7 +9,7 @@
     "entidad": {
       "type": "string"
     },
-    "abreviatura_entidad": {
+    "abreviatura_premio": {
       "type": "string"
     },
     "nombre_premio": {
@@ -20,6 +20,9 @@
     },
     "year": {
       "type": "integer"
+    },
+    "area_premio": {
+      "type": "string"
     }
   }
 }

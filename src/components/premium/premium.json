@@ -1,35 +1,34 @@
 {
   "collectionName": "components_premium_premiums",
   "info": {
-    "displayName": "premium"
+    "displayName": "premium",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "banner_header": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "video": {
-      "allowedTypes": [
-        "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "cards": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "beneficios": {
       "type": "component",
       "repeatable": true,
       "component": "beneficios.beneficios"
+    },
+    "video": {
+      "type": "string"
     }
   }
 }
