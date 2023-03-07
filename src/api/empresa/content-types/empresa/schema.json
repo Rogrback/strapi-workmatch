@@ -117,12 +117,6 @@
     "puestos_publicados": {
       "type": "string"
     },
-    "empresa_favoritas": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::empresa-favorita.empresa-favorita",
-      "mappedBy": "empresa_usuario"
-    },
     "premios": {
       "displayName": "Premios",
       "type": "component",
